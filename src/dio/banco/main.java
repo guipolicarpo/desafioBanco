@@ -1,12 +1,17 @@
 package dio.banco;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        cliente guilherme = new cliente();
+        Cliente guilherme = new Cliente();
         guilherme.setNome("Guilherme");
+        guilherme.setCpf("50422365602");
 
-        conta cc = new contaCorrente(guilherme);
-        conta cp = new contaPoupanca(guilherme);
+        Cliente felipe = new Cliente();
+        felipe.setNome("Felipe");
+        felipe.setCpf("76533578912");
+
+        Conta cc = new contaCorrente(guilherme);
+        Conta cp = new contaPoupanca(felipe);
 
         cc.depositar(100);
         cc.transferir(100, cp);
